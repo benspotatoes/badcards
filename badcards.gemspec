@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ["benspotatoes@gmail.com"]
   spec.summary       = %q{Ruby library for playing cards including BaDEmporium images.}
   spec.description   = %q{Includes cards, decks (of multiple sizes), hands, and drawing (of multiple cards).}
-  spec.homepage      = "http://github.com/sicophrenic/badcards"
+  spec.homepage      = "http://github.com/benspotatoes/badcards"
   spec.license       = "MIT"
 
   spec.files         = `git ls-files -z`.split("\x0")
