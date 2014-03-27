@@ -13,5 +13,13 @@ describe Card do
         @card.value.should == value
       end
     end
+
+    it 'should fail for an invalid suit' do
+      expect { make_card('Ace', 'fake_suit') }.to raise_error
+    end
+
+    it 'should fail for an invalid value' do
+      expect { make_card('fake_value', 'Spades') }.to raise_error
+    end
   end
 end
