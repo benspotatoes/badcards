@@ -9,7 +9,7 @@ Gem::Specification.new do |spec|
   spec.authors       = ["Benjamin Hsieh, Ben's Potatoes"]
   spec.email         = ["benspotatoes@gmail.com"]
   spec.summary       = %q{Ruby library for playing cards including BaDEmporium images.}
-  spec.description   = %q{Includes cards, decks (of multiple sizes), and drawing (of multiple cards).}
+  spec.description   = %q{Includes cards, decks (of multiple sizes), hands, and drawing (of multiple cards).}
   spec.homepage      = "http://github.com/sicophrenic/badcards"
   spec.license       = "MIT"
 
