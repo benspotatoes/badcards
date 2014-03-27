@@ -1,5 +1,4 @@
 require "badcards/version"
-
-module Badcards
-  # Your code goes here...
-end
+require "badcards/card"
+require "badcards/deck"
+require "badcards/hand"

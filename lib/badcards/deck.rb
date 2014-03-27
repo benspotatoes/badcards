@@ -1,0 +1,2 @@
+module BadCards
+end
