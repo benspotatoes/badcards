@@ -12,6 +12,11 @@ describe Card do
         make_card(value, suit)
         @card.value.should == value
       end
+
+      it 'should have an image' do
+        make_card(value, suit)
+        @card.img.should == Card::S3_URLS["#{value.downcase}+#{suit.downcase}"]
+      end
     end
 
     it 'should fail for an invalid suit' do
