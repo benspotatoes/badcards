@@ -1,4 +1,5 @@
 # BaDcards
+[![Gem Version](https://badge.fury.io/rb/badcards.png)](http://badge.fury.io/rb/badcards)
 [![Build Status](https://travis-ci.org/BensPotatoes/BaDCards.svg?branch=master)](https://travis-ci.org/BensPotatoes/BaDCards)
 [![Coverage Status](https://coveralls.io/repos/BensPotatoes/BaDCards/badge.png?branch=master)](https://coveralls.io/r/BensPotatoes/BaDCards?branch=master)
 
