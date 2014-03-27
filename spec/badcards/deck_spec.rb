@@ -23,10 +23,10 @@ describe Deck do
           if @match
             found_cards << true
             next
-          else
-            found_cards << false
           end
         end
+        found_cards.all?.should == true
+        found_cards.count.should == 52
       end
     end
 
