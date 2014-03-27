@@ -15,3 +15,8 @@ RSpec.configure do |config|
   #     --seed 1234
   config.order = 'random'
 end
+
+require 'badcards'
+
+require 'helper'
+include Helper

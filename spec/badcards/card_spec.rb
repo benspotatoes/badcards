@@ -1,23 +1,15 @@
 require 'spec_helper'
 
-def card_iterator
-  Card::SUITS.each do |suit|
-    Card::VALUES.each do |value|
-      yield suit, value
-    end
-  end
-end
-
 describe Card do
   describe 'values' do
-    card_iterator do |suit, value|
-      @card = Card.create!(suit, value)
-
+    Card.all_cards do |value, suit|
       it 'should return the appropriate suit' do
+        make_card(value, suit)
         @card.suit.should == suit
       end
 
       it 'should return the appropriate value' do
+        make_card(value, suit)
         @card.value.should == value
       end
     end
