@@ -1,6 +1,6 @@
 # BaDcards
 [![Build Status](https://travis-ci.org/BensPotatoes/BaDCards.svg?branch=master)](https://travis-ci.org/BensPotatoes/BaDCards)
-[![Coverage Status](https://coveralls.io/repos/BensPotatoes/BaDCards/badge.png)](https://coveralls.io/r/BensPotatoes/BaDCards)
+[![Coverage Status](https://coveralls.io/repos/BensPotatoes/BaDCards/badge.png?branch=master)](https://coveralls.io/r/BensPotatoes/BaDCards?branch=master)
 
 Ruby library of playing cards.
 
