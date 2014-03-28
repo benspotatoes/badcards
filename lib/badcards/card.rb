@@ -1,6 +1,19 @@
 class Card
   SUITS = %w[Diamonds Clubs Hearts Spades]
+  SHORT_SUITS = {
+    'D' => 'Diamonds',
+    'C' => 'Clubs',
+    'H' => 'Hearts',
+    'S' => 'Spades'
+  }
+
   VALUES = %w[Ace 2 3 4 5 6 7 8 9 10 Jack Queen King]
+  SHORT_VALUES = {
+    'A' => 'Ace',
+    'J' => 'Jack',
+    'Q' => 'Queen',
+    'K' => 'Jack'
+  }
 
   S3_URLS = {
     "ace+diamonds" => "https://s3-us-west-2.amazonaws.com/badcards/cards/diamond/ace.png",
@@ -61,14 +74,14 @@ class Card
   }
 
   def initialize(value, suit)
-    if !VALUES.include?(value)
+    if !VALUES.include?(value) && !VALUES.include?(SHORT_VALUES[value])
       raise ArgumentError, "Invalid Card value"
     end
-    if !SUITS.include?(suit)
+    if !SUITS.include?(suit) && !SUITS.include?(SHORT_SUITS[suit])
       raise ArgumentError, "Invalid Card suit"
     end
-    @value = value
-    @suit = suit
+    @value = SHORT_VALUES[value] || value
+    @suit = SHORT_SUITS[suit] || suit
     @image = S3_URLS["#{value.downcase}+#{suit.downcase}"]
   end
 
@@ -82,6 +95,10 @@ class Card
 
   def img
     @image
+  end
+
+  def to_s
+    "#{value} of #{suit}"
   end
 
   def self.all_cards

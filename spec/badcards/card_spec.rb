@@ -17,6 +17,11 @@ describe Card do
         make_card(value, suit)
         @card.img.should == Card::S3_URLS["#{value.downcase}+#{suit.downcase}"]
       end
+
+      it 'should print neatly' do
+        make_card(value, suit)
+        @card.to_s.should == "#{value} of #{suit}"
+      end
     end
 
     it 'should fail for an invalid suit' do
@@ -25,6 +30,20 @@ describe Card do
 
     it 'should fail for an invalid value' do
       expect { make_card('fake_value', 'Spades') }.to raise_error
+    end
+
+    Card::SHORT_VALUES.each do |short, long|
+      it "should not fail for short value: #{short}" do
+        make_card(short, 'Spades')
+        @card.value.should == long
+      end
+    end
+
+    Card::SHORT_SUITS.each do |short, long|
+      it "should not fail for short suit: #{short}" do
+        make_card('Ace', short)
+        @card.suit.should == long
+      end
     end
   end
 end

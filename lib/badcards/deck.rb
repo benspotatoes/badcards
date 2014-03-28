@@ -20,6 +20,17 @@ class Deck
     @cards.first
   end
 
+  def shuffle(num_times = 12)
+    num_times.times do
+      @cards.each_with_index do |card, index|
+        switch = rand(size)
+        @cards[index] = @cards[switch]
+        @cards[switch] = card
+      end
+    end
+    return
+  end
+
   def draw(num_to_draw = 1, hand_for_draw = nil)
     @drawn = []
     num_to_draw.times do

@@ -41,7 +41,10 @@ describe Deck do
 
   describe 'operation' do
     describe 'shuffling' do
-      pending("can't be tested?")
+      it 'should not fail' do
+        @deck = Deck.new
+        @deck.shuffle
+      end
     end
 
     describe 'drawing' do
