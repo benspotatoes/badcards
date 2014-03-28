@@ -82,7 +82,6 @@ class Card
     end
     @value = SHORT_VALUES[value] || value
     @suit = SHORT_SUITS[suit] || suit
-    @image = S3_URLS["#{value.downcase}+#{suit.downcase}"]
   end
 
   def value
@@ -94,7 +93,7 @@ class Card
   end
 
   def img
-    @image
+    S3_URLS["#{value.downcase}+#{suit.downcase}"]
   end
 
   def to_s
