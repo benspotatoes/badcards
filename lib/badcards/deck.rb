@@ -16,8 +16,12 @@ class Deck
     @cards.count
   end
 
-  def peek
-    @cards.first
+  def peek(num_to_peek = 1)
+    if num_to_peek == 1
+      @cards.first
+    else
+      @cards[0..num_to_peek-1]
+    end
   end
 
   def shuffle(num_times = 12)

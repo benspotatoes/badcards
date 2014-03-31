@@ -101,8 +101,8 @@ class Card
   end
 
   def self.all_cards
-    VALUES.each do |value|
-      SUITS.each do |suit|
+    SUITS.each do |suit|
+      VALUES.each do |value|
         yield value, suit
       end
     end
