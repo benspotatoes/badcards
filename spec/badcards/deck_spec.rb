@@ -65,6 +65,12 @@ describe Deck do
           top_card = @deck.peek
           @deck.cards.count.should == @card_count
         end
+
+        it 'should return multiple cards when specified' do
+          num_to_peek = 5
+          top_cards = @deck.peek(num_to_peek)
+          top_cards.count.should == num_to_peek
+        end
       end
 
       describe 'single' do

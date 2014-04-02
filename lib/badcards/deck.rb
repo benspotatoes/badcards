@@ -24,7 +24,9 @@ class Deck
     end
   end
 
-  def shuffle(num_times = 12)
+  # Defaults to seven 'rounds' of shuffling, determined to be the optimal value
+  # per Diaconis (http://en.wikipedia.org/wiki/Persi_Diaconis#Card_shuffling)
+  def shuffle(num_times = 7)
     num_times.times do
       @cards.each_with_index do |card, index|
         switch = rand(size)
